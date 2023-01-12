@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <span class="text-9xl">Succesfully deleted!</span>
+    <span class="text-xl">Redirecting to home in ..<span id="countdown">3</span> </span>
+    <script>
+        let count = 3;
+        function countdown() {
+            count--;
+            if(count > 0) {
+                document.getElementById("countdown").innerHTML=count;
+                setTimeout(countdown, 1000);
+            }
+        }
+        countdown();
+    </script>
+{% endblock %}

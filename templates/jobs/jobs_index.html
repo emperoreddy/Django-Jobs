@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% for item in job_list %}
+
+        <div class="relative">
+            <div
+                    class="absolute w-2/3 mx-auto inset-0 bg-violet-600 rounded-2xl blur-md"></div>
+            <div class="flex flex-col relative bg-slate-900 w-2/3 mx-auto my-20 rounded-2xl space-y-3 p-9">
+
+                <span class="relative flex flex-row text-3xl font-medium gap-5">
+                    {{ item.title }}
+                    <div class="flex justify-between w-full h-full flex-1">
+                    <a href="{% url 'jobs:edit_job' item.id %}"><img src="{% static 'assets/edit.svg' %}"
+                                                                     class="scale-90"
+                                                                     alt="edit"
+                                                                     href="{% url 'jobs:edit_job' item.id %}"/></a>
+                        {% if not item.active %}
+                            <button class="text-xl  py-2 px-5 bg-red-600 "><a href="{% url 'jobs:activate' item.id %}">Activate</a></button>
+                        {% else %}
+                            <button class="text-xl py-2 px-5 bg-green-600"><a href="{% url 'jobs:deactivate' item.id %}">Deactivate</a></button>
+                        {% endif %}
+                        </div>
+                </span>
+
+                {% if item.active %}
+                    <div class="text-xl text-green-500">Active</div>
+                {% else %}
+                    <div class="text-xl text-red-500">Not active</div>
+                {% endif %}
+
+                <a href="" onclick="" class="text-indigo-300">{{ item.url }}</a>
+                <span class="text-gray-200 leading-7">{{ item.description }}</span>
+
+
+
+            </div>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

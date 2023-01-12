@@ -1,0 +1,26 @@
+[
+  {
+    "model": "jobs.job",
+    "fields": {
+      "url": "www.google.com",
+      "title": "Frontend Developer",
+      "description": "Frontend developer responsible for designing and implementing user-facing features on website and web applications. Must have experience with HTML, CSS, and JavaScript and be able to work in a team environment."
+    }
+  },
+  {
+    "model": "jobs.job",
+    "fields": {
+      "url": "www.facebook.com",
+      "title": "Backend Developer",
+      "description": "Backend developer responsible for designing and implementing server-side logic and APIs for website and web applications. Must have experience with at least one programming language (such as Java, Python, Ruby, C#) and be familiar with database management systems. Should be able to work in a team environment and have good problem solving skills."
+    }
+  },
+  {
+    "model": "jobs.job",
+    "fields": {
+      "url": "www.uber.com",
+      "title": "UX/UI Designer",
+      "description": "UX/UI designer responsible for designing user interfaces and user experiences for website and web applications. Should have experience with design software such as Adobe Creative Suite, Sketch, or Figma and be able to create wireframes, prototypes, and user flows. Should have a good understanding of user-centered design principles and be able to conduct user research. Must be able to work in a team environment and be able to take feedback and incorporate it into their design."
+    }
+  }
+]

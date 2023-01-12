@@ -1,0 +1,9 @@
+{% extends 'jobs/jobs_form.html' %}
+{% block button %}
+
+    <button type="submit"
+            class="flex mx-auto justify-center bg-red-600 py-2 w-2/3  text-xl font-bold mb-10">
+        <a href="{% url 'jobs:delete' job.id %}">DELETE</a>
+    </button>
+
+{% endblock %}

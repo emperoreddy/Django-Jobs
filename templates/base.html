@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'templates/dist/output.css' %}">
+</head>
+<body class="bg-black text-white font-poppins">
+<nav
+        class="container flex bg-indigo-600 fixed z-10 h-12 justify-center gap-60 items-center text-lg font-medium top-0 "
+>
+    <a href="{% url 'jobs:list_jobs' %}" >SEE ALL JOBS</a>
+    <a href="{% url 'jobs:create_job' %}" >POST A JOB</a>
+</nav>
+
+<!-- job container -->
+
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
