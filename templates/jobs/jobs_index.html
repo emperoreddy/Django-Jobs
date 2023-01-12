@@ -4,10 +4,10 @@
 
     {% for item in job_list %}
 
-        <div class="relative">
+        <div class="relative" id="job-container" >
             <div
                     class="absolute w-2/3 mx-auto inset-0 bg-violet-600 rounded-2xl blur-md"></div>
-            <div class="flex flex-col relative bg-slate-900 w-2/3 mx-auto my-20 rounded-2xl space-y-3 p-9">
+            <div class="flex flex-col relative bg-slate-900 w-2/3 mx-auto my-20 rounded-2xl space-y-3 p-9" >
 
                 <span class="relative flex flex-row text-3xl font-medium gap-5">
                     {{ item.title }}
@@ -17,9 +17,9 @@
                                                                      alt="edit"
                                                                      href="{% url 'jobs:edit_job' item.id %}"/></a>
                         {% if not item.active %}
-                            <button class="text-xl  py-2 px-5 bg-red-600 "><a href="{% url 'jobs:activate' item.id %}">Activate</a></button>
+                            <button class="text-xl  py-2 px-5 bg-red-600 transition duration-150 ease-in-out hover:bg-red-500  hover:scale-110  "><a href="{% url 'jobs:activate' item.id %}">Activate</a></button>
                         {% else %}
-                            <button class="text-xl py-2 px-5 bg-green-600"><a href="{% url 'jobs:deactivate' item.id %}">Deactivate</a></button>
+                            <button class="text-xl py-2 px-5 bg-green-600 transition duration-150 ease-in-out hover:bg-green-500 hover:scale-110 "><a href="{% url 'jobs:deactivate' item.id %}">Deactivate</a></button>
                         {% endif %}
                         </div>
                 </span>
@@ -30,7 +30,7 @@
                     <div class="text-xl text-red-500">Not active</div>
                 {% endif %}
 
-                <a href="" onclick="" class="text-indigo-300">{{ item.url }}</a>
+                <a href="http://{{ item.url }}" onclick="" class="text-indigo-300">{{ item.url }}</a>
                 <span class="text-gray-200 leading-7">{{ item.description }}</span>
 
 
