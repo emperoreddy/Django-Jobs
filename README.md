@@ -14,7 +14,7 @@ A job board built with Django, HTML, and TailwindCSS as the final project in the
 1. Clone the repository
 
 ```python
-git clone https://github.com/YOUR_USERNAME/job-board.git
+git clone https://github.com/emperoreddy/job-board.git
 ```
 
 2. Install the required packages
